@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="price-toggler">
+        <span class="month active">monthly</span>
+        <span class="year">yearly</span>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>ADCA</h3>
+            <div class="price month"><span>Rs</span>700.<span>00</span></div>
+            <div class="price year"><span>Rs</span>9600.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> 1 person </p>
+                <p> <i class="fas fa-check"></i> TALLY </p>
+                <p> <i class="fas fa-check"></i> MICROSOFT </p>
+                <p> <i class="fas fa-check"></i> HTML </p>
+                <p> <i class="fas fa-check"></i> PAINT</p>
+            </div>
+            <a href="payment gateway/index.html" class="btn">choose plan</a>
+        </div>
+
+        <div class="box">
+            <h3>DCA</h3>
+            <div class="price month"><span>Rs</span>700.<span>00</span></div>
+            <div class="price year"><span>Rs</span>4500.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> 1 person </p>
+                <p> <i class="fas fa-check"></i> PAINT </p>
+                <p> <i class="fas fa-check"></i> BASIC COMPUTER </p>
+                <p> <i class="fas fa-check"></i> TEACHER SUPPORT </p>
+                <p> <i class="fas fa-check"></i> MICROSOFT </p>
+            </div>
+            <a href="payment gateway/index.html" class="btn">choose plan</a>
+        </div>
+
+        <div class="box">
+            <h3>KYP</h3>
+            <div class="price month"><span>Rs</span>1000.<span>00</span></div>
+            <div class="price year"><span>Rs</span>1000.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> 1 person </p>
+                <p> <i class="fas fa-check"></i> MICROSOFT </p>
+                <p> <i class="fas fa-check"></i> BS-CLS </p>
+                <p> <i class="fas fa-check"></i> PAINT </p>
+                <p> <i class="fas fa-check"></i> TEACHER SUPPORT</p>
+            </div>
+            <a href="payment gateway/index.html" class="btn">choose plan</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+let month = document.querySelector('.price-toggler .month');
+let year = document.querySelector('.price-toggler .year');
+let monthAmount = document.querySelectorAll('.box-container .box .month');
+let yearAmount = document.querySelectorAll('.box-container .box .year');
+
+year.onclick = () =>{
+    year.classList.add('active');
+    month.classList.remove('active');
+
+    monthAmount.forEach(mo =>{ mo.style.display = 'none' });
+    yearAmount.forEach(yr =>{ yr.style.display = 'block' });
+};
+
+month.onclick = () =>{
+    year.classList.remove('active');
+    month.classList.add('active');
+
+    monthAmount.forEach(mo =>{ mo.style.display = 'block' });
+    yearAmount.forEach(yr =>{ yr.style.display = 'none' });
+};
+
+</script>
+    
+</body>
+</html>
